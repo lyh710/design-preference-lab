@@ -79,3 +79,9 @@ verified; no scheduled firing or learner completion is claimed. The old hosted
 ChatGPT reminder remains unverified, as recorded in the schedule document.
 Lesson 01 remains unfinished. The unattended task must invite participation and
 must not advance progress or launch training on its own.
+
+Remote retrieval check: raw web reads returned a cache miss; read-only GitHub API
+requests successfully retrieved the committed daily-session and learning-state
+files using existing authentication with interactive network permission. Added
+that fallback to the scheduler prompt and repo instructions. Unattended network
+access remains subject to the scheduled run's permissions and has not been proven.

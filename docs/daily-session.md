@@ -25,7 +25,9 @@ this named task rather than running two daily learning programmes.
 ## Saved scheduler prompt
 
 > Open https://github.com/lyh710/design-preference-lab and read the latest RESUME.md
-> and docs/daily-session.md. Follow the repository instructions to resume the next
+> and docs/daily-session.md. If web reading fails, try read-only GitHub CLI API
+> access using existing authentication and available permissions; do not change
+> credentials. Follow the repository instructions to resume the next
 > unfinished daily learning session. Use actual repository contents as the source
 > of truth, without relying on any prior chat. If the files cannot be read, notify
 > the learner of that limitation instead of inventing progress.
@@ -52,6 +54,22 @@ this named task rather than running two daily learning programmes.
 If tools, repository access or required local files are unavailable, report the
 specific limitation. Never silently replace the recorded lesson with a generic
 topic or assume that an unavailable local dataset exists in a fresh checkout.
+
+### Repository retrieval fallback and verification
+
+If web reading fails and GitHub CLI is available, retrieve each file with a
+read-only request, for example:
+
+```sh
+gh api --method GET repos/lyh710/design-preference-lab/contents/docs/daily-session.md -H 'Accept: application/vnd.github.raw+json'
+```
+
+On 10 October, web reads of raw GitHub URLs returned a cache miss. Direct GitHub
+API reads of this file and `docs/learning-state.md` succeeded using the existing
+login with interactive network permission. This verifies remote file access in
+that session, not unattended network permission or a successful scheduled run.
+If a scheduled run cannot access the repository within its available permissions,
+report that blocker instead of bypassing restrictions or changing authentication.
 
 ## Recreating or checking the schedule
 
