@@ -13,10 +13,8 @@ actually been completed, the next unfinished lesson, working agreements and open
 questions. [The session log](docs/session-log.md) preserves past decisions and
 observations. [The roadmap](docs/learning-roadmap.md) explains the longer-term path.
 
-To resume in a fresh chat, provide this repo or a local checkout and say:
-
-> Read AGENTS.md and docs/learning-state.md. Resume the next unfinished learning
-> session from the committed state. Explain where we left off before proceeding.
+**[Copy the saved new-chat prompt from RESUME.md](RESUME.md).** You do not need
+to remember the prompt or retrieve the previous conversation.
 
 The new chat needs access to the repository contents; a name alone is insufficient.
 Use the latest pushed commit when starting elsewhere. Local-only or uncommitted

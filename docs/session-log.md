@@ -44,3 +44,10 @@ schedule/cost boundaries using only repo files. It correctly flagged that the
 handover would not reach a fresh clone until the documentation was committed and
 pushed. This entry is included in that handover commit; use git history and remote
 status to establish which checkpoint is available in a new checkout.
+
+## 2026-10-10 — save the restart prompt itself
+
+The learner requested that the restart prompt also live in the repo, rather than
+relying on memory or chat history. Saved the prompt in root `RESUME.md` and linked
+it from the README and learning state. Lesson 01 remains the next unfinished
+lesson; this documentation change does not represent learning progress.

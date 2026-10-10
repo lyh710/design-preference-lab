@@ -15,6 +15,8 @@ generative-model training is the priority gap. Use the existing app to support
 experiments; avoid letting app polish or introductory evaluation exercises delay
 training. The repo holds lasting decisions, learning progress and next steps so
 a fresh chat can resume without the old conversation.
+The reusable new-chat prompt lives in [RESUME.md](../RESUME.md), linked from the
+README; remembering or retrieving the prompt from a chat is not the learner's task.
 
 Daily sessions are intended to last 15–20 minutes: brief recap, one concept,
 one prediction/change/inspection, and a short interpretation. Longer experiments
