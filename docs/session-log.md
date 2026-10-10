@@ -123,3 +123,28 @@ card. The developer environment was created with `uv` and lacks `pip`, but alrea
 contains all check tools; no installation was required. Training package
 compatibility and accelerator availability remain unverified. No paid resource,
 dependency download or training run was started. Learner mastery is not claimed.
+
+## 2026-10-10 — guided steps 1–3 and four teaching pairs
+
+The learner requested simple explanations and one step at a time, then explicitly
+asked to start the first training exercise. Step 1 showed a brief and title-box
+settings. The learner explained that a longer title could fail to fit, be cut off
+or overlap other text. Step 2 introduced next-token training, loss and scoring only
+the layout. The learner predicted that repeated structure and colours would be
+easier because they stay constant, while event text requires copying from the
+brief. This is a prediction to test, not an observed training result. No claim of
+demonstrated mask implementation or complete loss understanding is made.
+
+Prepared four self-authored fictional brief/layout pairs for step 3, using seed 0
+and variant 0 from the existing generator. Saved the instruction and provenance
+with the examples; all four are explicitly training data for a memorisation check.
+The learner has yet to interpret what success on these examples would establish.
+No untouched test set, training loop, dependency installation or training run was
+created. The next practical step after discussion is local setup and inspection of
+the encoded batch. The agent prepared the data; the learner did not generate it.
+
+Checked that all four layouts reproduce their template SVGs and have zero detected
+out-of-bounds boxes, text-box overlaps and estimated text overflows. These checks
+do not establish visual quality. Source code and application behaviour are unchanged.
+All 12 existing tests, lint, formatting, type checks and source/wheel build passed;
+saved-pair validation and local lesson links also passed.

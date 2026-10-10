@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "purpose": "Four training examples for a memorisation check; not a test set.",
+  "provenance": "Fictional briefs authored for this lesson; layouts from the project template generator.",
+  "generator": "templates-v1",
+  "seed": 0,
+  "variant": 0,
+  "instruction": "Return the layout JSON for this brief using the fixed teaching template.",
+  "examples": [
+    {
+      "id": "lesson01-1",
+      "brief": {
+        "title": "Make art",
+        "details": "Art class - Monday at 6 pm",
+        "cta": "Book a place"
+      },
+      "layout": {
+        "width": 600,
+        "height": 800,
+        "background": "#29223d",
+        "accent": "#fbbca6",
+        "elements": [
+          {
+            "role": "title",
+            "text": "Make art",
+            "x": 48,
+            "y": 145,
+            "width": 504,
+            "height": 210,
+            "font_size": 54,
+            "color": "#fff4e4"
+          },
+          {
+            "role": "details",
+            "text": "Art class - Monday at 6 pm",
+            "x": 48,
+            "y": 405,
+            "width": 504,
+            "height": 120,
+            "font_size": 23,
+            "color": "#fff4e4"
+          },
+          {
+            "role": "cta",
+            "text": "Book a place",
+            "x": 48,
+            "y": 660,
+            "width": 504,
+            "height": 80,
+            "font_size": 24,
+            "color": "#fbbca6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson01-2",
+      "brief": {
+        "title": "Plant seeds",
+        "details": "Garden club - Tuesday at 10 am",
+        "cta": "Join us"
+      },
+      "layout": {
+        "width": 600,
+        "height": 800,
+        "background": "#29223d",
+        "accent": "#fbbca6",
+        "elements": [
+          {
+            "role": "title",
+            "text": "Plant seeds",
+            "x": 48,
+            "y": 145,
+            "width": 504,
+            "height": 210,
+            "font_size": 54,
+            "color": "#fff4e4"
+          },
+          {
+            "role": "details",
+            "text": "Garden club - Tuesday at 10 am",
+            "x": 48,
+            "y": 405,
+            "width": 504,
+            "height": 120,
+            "font_size": 23,
+            "color": "#fff4e4"
+          },
+          {
+            "role": "cta",
+            "text": "Join us",
+            "x": 48,
+            "y": 660,
+            "width": 504,
+            "height": 80,
+            "font_size": 24,
+            "color": "#fbbca6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson01-3",
+      "brief": {
+        "title": "Hear music",
+        "details": "Music night - Friday at 7 pm",
+        "cta": "Find a seat"
+      },
+      "layout": {
+        "width": 600,
+        "height": 800,
+        "background": "#29223d",
+        "accent": "#fbbca6",
+        "elements": [
+          {
+            "role": "title",
+            "text": "Hear music",
+            "x": 48,
+            "y": 145,
+            "width": 504,
+            "height": 210,
+            "font_size": 54,
+            "color": "#fff4e4"
+          },
+          {
+            "role": "details",
+            "text": "Music night - Friday at 7 pm",
+            "x": 48,
+            "y": 405,
+            "width": 504,
+            "height": 120,
+            "font_size": 23,
+            "color": "#fff4e4"
+          },
+          {
+            "role": "cta",
+            "text": "Find a seat",
+            "x": 48,
+            "y": 660,
+            "width": 504,
+            "height": 80,
+            "font_size": 24,
+            "color": "#fbbca6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson01-4",
+      "brief": {
+        "title": "Fix things",
+        "details": "Repair cafe - Saturday at 2 pm",
+        "cta": "Bring one item"
+      },
+      "layout": {
+        "width": 600,
+        "height": 800,
+        "background": "#29223d",
+        "accent": "#fbbca6",
+        "elements": [
+          {
+            "role": "title",
+            "text": "Fix things",
+            "x": 48,
+            "y": 145,
+            "width": 504,
+            "height": 210,
+            "font_size": 54,
+            "color": "#fff4e4"
+          },
+          {
+            "role": "details",
+            "text": "Repair cafe - Saturday at 2 pm",
+            "x": 48,
+            "y": 405,
+            "width": 504,
+            "height": 120,
+            "font_size": 23,
+            "color": "#fff4e4"
+          },
+          {
+            "role": "cta",
+            "text": "Bring one item",
+            "x": 48,
+            "y": 660,
+            "width": 504,
+            "height": 80,
+            "font_size": 24,
+            "color": "#fbbca6"
+          }
+        ]
+      }
+    }
+  ]
+}

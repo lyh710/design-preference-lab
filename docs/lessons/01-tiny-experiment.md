@@ -4,6 +4,32 @@ The learner selected local brief-to-layout training from template examples on
 10 October 2026. The details below are a proposed run plan to discuss after the
 [worked example](01-training-example.md). No training code or run exists yet.
 
+## Step 3 — inspect the four training examples
+
+The [saved training pairs](examples/01-training-pairs.json) contain four fictional
+briefs and their exact template layouts. All four are training examples:
+
+| Title | Details | Call to action |
+| --- | --- | --- |
+| Make art | Art class - Monday at 6 pm | Book a place |
+| Plant seeds | Garden club - Tuesday at 10 am | Join us |
+| Hear music | Music night - Friday at 7 pm | Find a seat |
+| Fix things | Repair cafe - Saturday at 2 pm | Bring one item |
+
+Only the event text changes. Colours, positions and font sizes stay fixed.
+The file records the instruction, generator version, seed and variant. Its briefs
+are newly authored teaching material, not collected user data.
+
+The first check deliberately trains and inspects output on these same four pairs.
+This asks whether the training setup can learn its examples at all. Success would
+support a basic engineering check; it would not demonstrate performance on unseen
+briefs. No untouched test set has been created. Reserve separate event families
+before testing generalisation, as described below.
+
+**Learner task:** suppose the model reproduces all four layouts. Explain what
+that establishes and what remains untested. Then move to setting up the local
+training tools and inspecting an encoded batch, one step at a time.
+
 ## Question and expectation
 
 Can a small sequence model trained from scratch learn to reproduce a handful of

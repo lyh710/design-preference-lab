@@ -34,26 +34,27 @@ results. A working implementation alone is not evidence of learner mastery.
 | Learner observation | Preferred the left poster because the headline felt “more centered and clear.” Both displayed the same structural metrics. This is one qualitative observation, not a study result. |
 | Intro exercise | One comparison discussed. The full three-brief exercise was not completed; it is optional practice, not a prerequisite for starting training. |
 | Actual ML training | Not started. No learned generator, LoRA adapter, visual evaluator or reward model exists. No training loss or model-quality improvement has been measured. |
-| Guided lessons | [Lesson 01 worked example](lessons/01-training-example.md) and [tiny experiment card](lessons/01-tiny-experiment.md) prepared and checked against the template generator. The learner selected this training direction; their explanations and agreement on detailed run checks remain pending. No executable training exercise exists yet. |
+| Guided lessons | Lesson 01 steps 1–2 discussed. The learner identified long-title fit/overlap risk and predicted fixed layout structure would be easier to learn than copying changing event text. Four [training pairs](lessons/examples/01-training-pairs.json) are prepared for step 3. No executable training loop exists yet. |
 
 ## Next unfinished lesson: 01 — what does the generator learn?
 
-**Status:** materials prepared; learner discussion started, not completed.
+**Status:** steps 1–2 discussed; step 3 training examples prepared for inspection.
+The learner explicitly requested one step at a time, with the purpose explained.
 
 **Purpose:** connect the current brief/layout representation to actual supervised
 training, then prepare the first tiny local training experiment.
 
 **Resume at the learner discussion:**
 
-1. Open [the worked example](lessons/01-training-example.md). The learner has
-   already chosen the tiny local brief-to-layout training direction; do not ask
-   them to choose it again. Ask for their explanation of input, target and loss
-   tokens, plus a likely failure despite lower loss. A question about that failure
-   was sent in the resume session; no answer has been recorded yet.
-2. Discuss [the experiment card](lessons/01-tiny-experiment.md), including its
-   proposed four-example memorisation check, run bounds and save/reload evidence.
-   Agree those detailed checks before constructing the training exercise. Keep
-   separate brief families for development and untouched testing.
+1. Continue at step 3 in [the experiment card](lessons/01-tiny-experiment.md): inspect
+   the four training pairs and discuss what memorising them can and cannot show.
+   The learner has selected this direction and requested that the exercise begin;
+   keep moving one step at a time. Their step 3 interpretation is not yet recorded.
+2. Next, introduce the local setup and proposed run bounds (200 updates or two
+   minutes), then inspect the actual encoded input/target and loss mask before
+   training. Token masking and loss were explained but have not yet been verified
+   through the learner's inspection of a real batch. Confirm understanding through
+   that inspection. Reserve separate event families before testing generalisation.
 3. Recheck current resources and select compatible training tools. Preflight found
    no training libraries in the existing project or system Python environment;
    package compatibility and accelerator support remain unverified. Use a separate
