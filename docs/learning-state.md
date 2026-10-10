@@ -25,6 +25,11 @@ need separate time agreed with the learner. The assistant prepares supporting
 code, tests and explanations; the learner makes research choices and explains
 results. A working implementation alone is not evidence of learner mastery.
 
+The learner always wants to read the code at each step. Apply the code walkthrough
+rule in [AGENTS.md](../AGENTS.md): show actual runnable code, explain its important
+lines and observed output, and connect it to the topic and the target-role skills.
+Provide this proactively, with a source link, while proceeding one step at a time.
+
 ## Current checkpoint
 
 | Area | Actual status / evidence |
@@ -34,11 +39,11 @@ results. A working implementation alone is not evidence of learner mastery.
 | Learner observation | Preferred the left poster because the headline felt “more centered and clear.” Both displayed the same structural metrics. This is one qualitative observation, not a study result. |
 | Intro exercise | One comparison discussed. The full three-brief exercise was not completed; it is optional practice, not a prerequisite for starting training. |
 | Actual ML training | Not started. No learned generator, LoRA adapter, visual evaluator or reward model exists. No training loss or model-quality improvement has been measured. |
-| Guided lessons | Lesson 01 steps 1–3 discussed: the learner identified layout-fit risk, predicted copying difficulty, and correctly identified unseen-data performance as untested by memorisation. Four training pairs are saved. Step 4 local tools are installed and checked; see [setup](lessons/01-local-setup.md). No sequence-model training loop exists yet. |
+| Guided lessons | Lesson 01 steps 1–3 discussed: the learner identified layout-fit risk, predicted copying difficulty, and correctly identified unseen-data performance as untested by memorisation. Four training pairs are saved. Step 4 local tools are installed and checked. Step 5 [data-preparation code and walkthrough](lessons/01-training-batch.md) are implemented and verified; the learner has not yet interpreted its shift/mask boundary. No sequence-model training loop exists yet. |
 
 ## Next unfinished lesson: 01 — what does the generator learn?
 
-**Status:** steps 1–3 discussed; step 4 local environment prepared and checked.
+**Status:** step 5 code prepared, run and explained; learner interpretation pending.
 The learner explicitly requested one step at a time, with the purpose explained.
 
 **Purpose:** connect the current brief/layout representation to actual supervised
@@ -46,10 +51,12 @@ training, then prepare the first tiny local training experiment.
 
 **Resume at the learner discussion:**
 
-1. Continue with step 5: inspect an actual encoded brief/layout batch. Show the
-   prompt, first layout token, end marker and padding; verify the next-token shift
-   and which labels contribute to loss. The learner has already identified that
-   success on four training examples leaves performance on unseen data untested.
+1. Continue with [step 5](lessons/01-training-batch.md). The code is
+   `design_lab/training_data.py`; the saved walkthrough shows actual counts and
+   boundaries from the four pairs. Ask why position 168 is scored even though
+   its input is the final prompt token. The learner has not answered yet. Check
+   their understanding before introducing the model and training loop. They have
+   already explained the unseen-data limitation; do not repeat that question.
 2. Use the separate environment at `runs/lesson01-env`: Python 3.14.3, PyTorch
    2.14.1 and NumPy 2.5.3 on macOS arm64. Exact package versions and setup commands
    are saved in [the setup guide](lessons/01-local-setup.md). CPU scalar forward,

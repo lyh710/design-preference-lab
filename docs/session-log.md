@@ -172,3 +172,37 @@ encoded batch, followed by construction of the bounded training loop.
 
 All 12 app tests, lint, formatting, type checks and source/wheel build passed.
 Local setup/lesson links resolve. The documented setup checks ran successfully.
+
+## 2026-10-10 — standing code walkthrough rule and step 5
+
+The learner requested that every learning step show the code, explain it, and
+connect it to both the learning topic and the skills needed for their target
+roles. Added a standing rule in `AGENTS.md` and references in the resume prompt,
+daily-session instructions and learning state. This is a project-wide teaching
+preference, not a one-off request. The previous setup guide now also explains its
+role connections.
+
+Implemented `design_lab/training_data.py` with byte encoding, explicit next-token
+alignment, completion/end-only labels and ignored padding. Its CLI prepares all
+four stored examples with no ML dependency or weight update. Added the step 5
+code walkthrough, real output, explanations and separate role connections. The
+learner has not yet interpreted the shift/mask boundary, so this step remains open.
+
+Five new tests first failed on the missing module, then passed. They cover the
+first completion label and end marker, prompt/padding exclusion, Unicode byte
+boundaries, refusing truncation, and the real four-example CLI. Full suite: 17
+tests passed with loopback access; lint, formatting, type checks (six source
+files) and source/wheel build passed. The actual training-environment command
+produced four rows of 611 positions. The first has 169 prompt bytes, 426 layout
+bytes, 427 scored labels and 16 padding tokens. No model training occurred.
+
+The generated batch is reproducible from committed source and pairs; its local
+JSON file stays in ignored `runs/lesson01-batch.json`. The next action is the
+learner's code interpretation, then the small model and bounded training loop.
+
+Independent review identified an older illustrative padding row inconsistent with
+the chosen shifted representation, and a gap in regression checks for the stored
+targets. Aligned the table and strengthened the CLI test to compare stored and
+emitted layouts with the fixed template generator and decode the full input. All
+17 tests passed again; documented counts matched the actual CLI output and all
+56 local Markdown links checked resolved.

@@ -40,6 +40,8 @@ this named task rather than running two daily learning programmes.
 2. Notify the learner that the daily 15–20 minute session is ready. Briefly explain
    where they left off, which role-related capability the next step develops, and
    present one small question or hands-on step.
+   Apply the code walkthrough rule in `AGENTS.md`: show the relevant source,
+   explain it, and connect it to the learning topic and target-role skills.
 3. Wait for the learner to respond before advancing. If the last lesson is
    unfinished, continue it. A missed day does not create a completed lesson or
    justify skipping to the next one.

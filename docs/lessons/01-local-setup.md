@@ -62,5 +62,12 @@ are both 36 at `w = 2`. A passing check establishes that these basic operations
 work. It does not establish sequence-model training, memory fit for that model,
 accelerator support, or model checkpoint recovery.
 
-**Next:** inspect a real brief/layout batch, including the next-token shift and
-which labels count toward loss. Then construct and run the bounded training loop.
+For the **Design Generation** role, this code introduces the distinction between
+calculating a gradient and updating weights, and checks basic experiment recovery.
+For the **Evaluations** role, using a calculation with a known answer shows how to
+validate a measurement before interpreting it. This scalar check does not test a
+learned generator's quality; those claims require a real model and separate evidence.
+
+**Next:** [read and inspect the training-batch code](01-training-batch.md), including
+the next-token shift and which labels count toward loss. Then construct and run
+the bounded training loop.

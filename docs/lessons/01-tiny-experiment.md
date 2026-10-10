@@ -31,6 +31,8 @@ that establishes and what remains untested. Then move to setting up the local
 training tools and inspecting an encoded batch, one step at a time.
 
 Step 4 setup commands and actual verification are in [the local setup guide](01-local-setup.md).
+Step 5 [code and walkthrough](01-training-batch.md) prepare the training batch;
+the learner's interpretation is pending. A model and training loop are not built yet.
 
 ## Question and expectation
 

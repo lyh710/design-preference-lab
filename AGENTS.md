@@ -24,6 +24,19 @@ inspect or interpret a result. Distinguish code built by an agent, experiments
 actually run, and understanding demonstrated by the learner. Advancement requires
 the lesson's recorded completion evidence, not elapsed days or generated code.
 
+### Code must be part of every learning step
+
+The learner always wants to read the code. Show the relevant runnable code inline
+in the conversation without waiting for a request, and link its repository source.
+Explain the important lines, inputs, outputs and observed result in plain language.
+Connect that code to the concept being learned and explicitly to the relevant
+Design Generation and/or Evaluations skill in `docs/role-context.md`; explain each
+role's connection when both apply. A file link or execution summary alone is not
+a code walkthrough. Keep each step small enough to read and discuss before moving
+on; use the actual implementation, label excerpts, and distinguish expected output
+from output actually observed. Save the code, explanation and role connection with
+the lesson so a fresh chat can follow the same teaching method.
+
 ## End every substantive session
 
 - Update `docs/learning-state.md` with the precise next action and remaining work.

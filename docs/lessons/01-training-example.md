@@ -88,7 +88,12 @@ sequence with prompt `P :`, target `{ }`, end marker `END`, and padding `PAD`:
 | `:` | `{` | `{` — first target token counts |
 | `{` | `}` | `}` |
 | `}` | `END` | `END` |
-| `END` | `PAD` | ignored |
+| `PAD` | none (filler) | ignored |
+
+This table uses the shifted representation in
+[the step 5 code](01-training-batch.md): END remains a target label, but is omitted
+from the inputs because there is no further answer to predict after it. Padding
+is added after the shift.
 
 Masking loss is separate from preventing the model from seeing future tokens.
 The model must only use the preceding sequence when making each prediction.

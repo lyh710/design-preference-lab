@@ -8,6 +8,9 @@ in this repository; you do not need the previous conversation.
 > Read AGENTS.md and docs/learning-state.md. Explain where we left off, then resume
 > the next unfinished lesson. Persist substantive progress and decisions back
 > into the repo.
+> Show the code at each step, explain what it does and what I should learn,
+> and connect it to the skills required for my target roles. Follow AGENTS.md's
+> code walkthrough instructions and proceed one step at a time.
 
 If you are the assistant reading this file to resume the project, follow
 [AGENTS.md](AGENTS.md), then [the current learning state](docs/learning-state.md).
