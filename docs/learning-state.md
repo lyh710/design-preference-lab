@@ -34,11 +34,11 @@ results. A working implementation alone is not evidence of learner mastery.
 | Learner observation | Preferred the left poster because the headline felt “more centered and clear.” Both displayed the same structural metrics. This is one qualitative observation, not a study result. |
 | Intro exercise | One comparison discussed. The full three-brief exercise was not completed; it is optional practice, not a prerequisite for starting training. |
 | Actual ML training | Not started. No learned generator, LoRA adapter, visual evaluator or reward model exists. No training loss or model-quality improvement has been measured. |
-| Guided lessons | Lesson 01 steps 1–2 discussed. The learner identified long-title fit/overlap risk and predicted fixed layout structure would be easier to learn than copying changing event text. Four [training pairs](lessons/examples/01-training-pairs.json) are prepared for step 3. No executable training loop exists yet. |
+| Guided lessons | Lesson 01 steps 1–3 discussed: the learner identified layout-fit risk, predicted copying difficulty, and correctly identified unseen-data performance as untested by memorisation. Four training pairs are saved. Step 4 local tools are installed and checked; see [setup](lessons/01-local-setup.md). No sequence-model training loop exists yet. |
 
 ## Next unfinished lesson: 01 — what does the generator learn?
 
-**Status:** steps 1–2 discussed; step 3 training examples prepared for inspection.
+**Status:** steps 1–3 discussed; step 4 local environment prepared and checked.
 The learner explicitly requested one step at a time, with the purpose explained.
 
 **Purpose:** connect the current brief/layout representation to actual supervised
@@ -46,20 +46,20 @@ training, then prepare the first tiny local training experiment.
 
 **Resume at the learner discussion:**
 
-1. Continue at step 3 in [the experiment card](lessons/01-tiny-experiment.md): inspect
-   the four training pairs and discuss what memorising them can and cannot show.
-   The learner has selected this direction and requested that the exercise begin;
-   keep moving one step at a time. Their step 3 interpretation is not yet recorded.
-2. Next, introduce the local setup and proposed run bounds (200 updates or two
-   minutes), then inspect the actual encoded input/target and loss mask before
-   training. Token masking and loss were explained but have not yet been verified
-   through the learner's inspection of a real batch. Confirm understanding through
-   that inspection. Reserve separate event families before testing generalisation.
-3. Recheck current resources and select compatible training tools. Preflight found
-   no training libraries in the existing project or system Python environment;
-   package compatibility and accelerator support remain unverified. Use a separate
-   training environment. Explain dependencies and licensing before downloads.
-   No cloud resources or pretrained model downloads are needed for this first run.
+1. Continue with step 5: inspect an actual encoded brief/layout batch. Show the
+   prompt, first layout token, end marker and padding; verify the next-token shift
+   and which labels contribute to loss. The learner has already identified that
+   success on four training examples leaves performance on unseen data untested.
+2. Use the separate environment at `runs/lesson01-env`: Python 3.14.3, PyTorch
+   2.14.1 and NumPy 2.5.3 on macOS arm64. Exact package versions and setup commands
+   are saved in [the setup guide](lessons/01-local-setup.md). CPU scalar forward,
+   backward and fresh-process save/reload passed. A sequence model and its memory
+   requirements have not yet been tested; accelerator support is untested.
+3. Introduce the proposed first-run bound of 200 updates or two minutes before
+   running the actual training loop. Preserve raw generated outputs and compare
+   the same examples before/after; inspect failures and reload saved model weights.
+   Keep the learner involved one step at a time. No cloud resources or pretrained
+   model downloads are needed. Reserve separate families before generalisation tests.
 
 **Lesson completion evidence:** the worked example and chosen experiment are
 committed, and the learner has explained what the model predicts, what its loss
@@ -100,7 +100,8 @@ and resume the unfinished lesson; they do not advance learning or modify the rep
 
 - Confirm the first actual daily run; configuration is verified, execution is not yet observed.
 - Complete the Lesson 01 discussion, agree the detailed tiny-run checks and select
-  compatible local tools. The brief-to-layout training direction is selected.
+  the sequence-model configuration. The local CPU tools are installed; the
+  brief-to-layout training direction is selected.
 - Choose a public source license before inviting reuse; none has been selected.
 
 For historical decisions and learner observations, read [the session log](session-log.md).

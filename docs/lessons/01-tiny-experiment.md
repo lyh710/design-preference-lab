@@ -30,6 +30,8 @@ before testing generalisation, as described below.
 that establishes and what remains untested. Then move to setting up the local
 training tools and inspecting an encoded batch, one step at a time.
 
+Step 4 setup commands and actual verification are in [the local setup guide](01-local-setup.md).
+
 ## Question and expectation
 
 Can a small sequence model trained from scratch learn to reproduce a handful of
@@ -52,8 +54,8 @@ Even successful memorisation does not establish useful output on new briefs.
 - Propose at most 200 updates or two minutes of training, whichever comes first,
   with the same data and settings throughout. Record failure at the limit;
   agree a changed hypothesis before any longer run. Installation time is separate.
-- Use a separate training environment. PyTorch is a candidate dependency, subject
-  to verifying a compatible package and its licence before installation.
+- Use the separate training environment established in step 4. PyTorch 2.14.1
+  is installed and basic CPU operations passed; sequence-model execution is pending.
   [PyTorch's licence](https://github.com/pytorch/pytorch/blob/main/LICENSE) includes
   BSD-style terms and third-party notices. No external dataset or model licence
   is needed for random weights and our own fictional examples. The project's
@@ -76,7 +78,7 @@ Even successful memorisation does not establish useful output on new briefs.
 6. The learner interprets the loss and at least one generated output. Distinguish
    agent-run engineering checks from training personally inspected by the learner.
 
-## Local preflight, 10 October 2026
+## Initial local preflight, 10 October 2026 (before step 4)
 
 The existing project environment has Python 3.14.3 and its developer check tools.
 Neither that environment nor system Python has PyTorch, MLX or NumPy installed.
@@ -90,3 +92,14 @@ prove one forward/backward step and save/reload on the selected device. Accelera
 support remains untested; if considered later, follow the
 [PyTorch MPS availability check](https://docs.pytorch.org/docs/2.14/notes/mps.html).
 No packages, models or datasets were downloaded during this preflight.
+
+## Step 4 setup evidence, 10 October 2026
+
+The separate `runs/lesson01-env` now contains PyTorch 2.14.1 and NumPy 2.5.3 on
+Python 3.14.3/macOS 27.0.1 arm64. Exact installed versions are saved in
+[requirements-training-macos.txt](../../requirements-training-macos.txt). Before
+installation, disk space was about 774 GiB free and `memory_pressure` reported
+72% system-wide memory free; neither is a sequence-model memory measurement.
+The documented scalar CPU calculation, gradient, local save and fresh-process
+reload passed. No optimiser step, poster-model training or model download occurred.
+The existing app environment still has no PyTorch installed.

@@ -148,3 +148,27 @@ out-of-bounds boxes, text-box overlaps and estimated text overflows. These check
 do not establish visual quality. Source code and application behaviour are unchanged.
 All 12 existing tests, lint, formatting, type checks and source/wheel build passed;
 saved-pair validation and local lesson links also passed.
+
+## 2026-10-10 — unseen-data distinction and local tools
+
+The learner answered that perfect reproduction of the four training pairs leaves
+untested “whether it can handle unseen data.” This correctly identifies the
+generalisation limit of the memorisation check. Proceeded to step 4 setup without
+advancing to model training.
+
+Installed PyTorch 2.14.1 and NumPy 2.5.3 plus their dependencies into the separate,
+ignored `runs/lesson01-env`, using the existing Python 3.14.3. Checked official
+package compatibility/licensing before installation and saved all resolved package
+versions in `requirements-training-macos.txt`. Setup, purpose and reproduction
+commands are documented in `docs/lessons/01-local-setup.md`. No pretrained weights,
+external dataset, cloud service or paid resource was used.
+
+Ran the guide's two check commands: CPU scalar forward calculation and derivative
+both produced the expected 36; the scalar weight stayed 2, and a fresh process
+reloaded the saved value. These are framework checks performed by the agent, not
+learner-run model training or a model checkpoint test. Confirmed the original app
+environment still has no PyTorch. Current next action is inspection of an actual
+encoded batch, followed by construction of the bounded training loop.
+
+All 12 app tests, lint, formatting, type checks and source/wheel build passed.
+Local setup/lesson links resolve. The documented setup checks ran successfully.
