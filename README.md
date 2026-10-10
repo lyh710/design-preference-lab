@@ -75,6 +75,10 @@ a meaningful preference. These labels are practice records, not a statistically
 powered dataset. Follow the next lesson in [learning-state.md](docs/learning-state.md)
 when resuming; completing this optional exercise is not a gate to model training.
 
+Start training preparation with [Lesson 01: the input, target and loss](docs/lessons/01-training-example.md)
+and its [proposed tiny experiment](docs/lessons/01-tiny-experiment.md).
+The worked example runs with the existing app; the training loop is not built yet.
+
 Each later experiment should state its hypothesis first, separate development and untouched test briefs, record model/data revisions, report failure slices and uncertainty, and include a short research memo. Keep private or employer material out of the repository. See the [design](docs/superpowers/specs/2026-10-10-first-slice-design.md) and [implementation plan](docs/superpowers/plans/2026-10-10-first-slice.md).
 
 ## Development

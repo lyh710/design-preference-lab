@@ -85,3 +85,41 @@ requests successfully retrieved the committed daily-session and learning-state
 files using existing authentication with interactive network permission. Added
 that fallback to the scheduler prompt and repo instructions. Unattended network
 access remains subject to the scheduled run's permissions and has not been proven.
+
+## 2026-10-10 — resume inspection and Lesson 01 preparation
+
+**Repository inspection:** reused the clean existing checkout at `e1e574c` and
+verified it matched GitHub. The only local/remote branch was `main`; there were
+no stashes, other worktrees, issues or pull requests. The latest five GitHub runs
+passed. The referenced “Resume GitHub Project” chat contained a handoff request,
+with no additional research decisions. An independent read-only review found no
+demonstrable defect in the completed template baseline and identified the missing
+Lesson 01 guide as the clear next action.
+
+**Learner decision:** selected “Yes—start with this tiny training exercise” for
+a local model learning fictional brief-to-layout pairs from the current templates.
+No answer to the follow-up interpretation question has yet been recorded. The
+selected direction is preserved; detailed run checks remain proposed.
+
+**Prepared:** `docs/lessons/01-training-example.md` contains a real input/target,
+reproduction command, next-token loss explanation, prompt/padding mask and target
+shift example, and two understanding questions. The companion experiment card
+proposes a small local memorisation run with explicit limits, output inspection
+and fresh-process weight reload. No training loop, model, dataset split or measured
+training result was created. Updated the README and authoritative resume state.
+
+**Verification:** all 12 existing tests passed with loopback access; lint,
+formatting, type checks and source/wheel build passed. The initial restricted test
+run had two HTTP setup errors because the sandbox denied socket binding; the same
+tests passed after enabling loopback access, without code changes. The lesson's
+embedded target exactly matched the template's renderer fields, rendered the same
+SVG, and was reproduced by its documented command. All 32 local links checked in
+the README, learning state and lesson files resolved. No new browser walkthrough
+was needed for these documentation-only changes.
+
+**Environment:** checked project/system Python, installed training libraries,
+disk space and memory-page statistics. Findings and limits are in the experiment
+card. The developer environment was created with `uv` and lacks `pip`, but already
+contains all check tools; no installation was required. Training package
+compatibility and accelerator availability remain unverified. No paid resource,
+dependency download or training run was started. Learner mastery is not claimed.

@@ -34,30 +34,31 @@ results. A working implementation alone is not evidence of learner mastery.
 | Learner observation | Preferred the left poster because the headline felt “more centered and clear.” Both displayed the same structural metrics. This is one qualitative observation, not a study result. |
 | Intro exercise | One comparison discussed. The full three-brief exercise was not completed; it is optional practice, not a prerequisite for starting training. |
 | Actual ML training | Not started. No learned generator, LoRA adapter, visual evaluator or reward model exists. No training loss or model-quality improvement has been measured. |
-| Guided lessons | Broad roadmap exists. The first guided training lesson and executable training exercise still need to be prepared. |
+| Guided lessons | [Lesson 01 worked example](lessons/01-training-example.md) and [tiny experiment card](lessons/01-tiny-experiment.md) prepared and checked against the template generator. The learner selected this training direction; their explanations and agreement on detailed run checks remain pending. No executable training exercise exists yet. |
 
 ## Next unfinished lesson: 01 — what does the generator learn?
 
-**Status:** planned, not delivered or completed.
+**Status:** materials prepared; learner discussion started, not completed.
 
 **Purpose:** connect the current brief/layout representation to actual supervised
 training, then prepare the first tiny local training experiment.
 
-**At the next session:**
+**Resume at the learner discussion:**
 
-1. Orient the learner in two sentences using this checkpoint. Read
-   `design_lab/core.py` and `design_lab/examples/briefs.json` with them as needed.
-   Use one example to show the input brief and the layout the model will predict.
-2. Prepare `docs/lessons/01-training-example.md` as a short guide: one concrete
-   input/target, a plain explanation of next-token prediction and training loss,
-   which tokens should contribute to that loss, and two understanding questions.
-   This file is a planned deliverable; it does not exist at this checkpoint.
-3. Ask the learner to identify the input, target and a likely failure. Agree a
-   tiny experiment and its completion checks before constructing the training
-   exercise. Keep separate brief families for development and untouched testing.
-4. Check installed training tools and current available memory/disk; select a
-   small local setup. Plan a tiny model trained from scratch before LoRA. Explain
-   dependencies and model/data licensing before downloads. No cloud resources.
+1. Open [the worked example](lessons/01-training-example.md). The learner has
+   already chosen the tiny local brief-to-layout training direction; do not ask
+   them to choose it again. Ask for their explanation of input, target and loss
+   tokens, plus a likely failure despite lower loss. A question about that failure
+   was sent in the resume session; no answer has been recorded yet.
+2. Discuss [the experiment card](lessons/01-tiny-experiment.md), including its
+   proposed four-example memorisation check, run bounds and save/reload evidence.
+   Agree those detailed checks before constructing the training exercise. Keep
+   separate brief families for development and untouched testing.
+3. Recheck current resources and select compatible training tools. Preflight found
+   no training libraries in the existing project or system Python environment;
+   package compatibility and accelerator support remain unverified. Use a separate
+   training environment. Explain dependencies and licensing before downloads.
+   No cloud resources or pretrained model downloads are needed for this first run.
 
 **Lesson completion evidence:** the worked example and chosen experiment are
 committed, and the learner has explained what the model predicts, what its loss
@@ -97,7 +98,8 @@ and resume the unfinished lesson; they do not advance learning or modify the rep
 ## Open decisions
 
 - Confirm the first actual daily run; configuration is verified, execution is not yet observed.
-- Select the tiny training experiment and compatible local tools during Lesson 01.
+- Complete the Lesson 01 discussion, agree the detailed tiny-run checks and select
+  compatible local tools. The brief-to-layout training direction is selected.
 - Choose a public source license before inviting reuse; none has been selected.
 
 For historical decisions and learner observations, read [the session log](session-log.md).
