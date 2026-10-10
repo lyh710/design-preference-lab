@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+data/
+runs/
+*.sqlite*
+.env*
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+*.egg-info/
+.superpowers/

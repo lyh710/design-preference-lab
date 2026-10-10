@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design Preference Lab</title>
+  <link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script>
+</head>
+<body>
+  <header><a class="brand" href="/">D/P <span>Design Preference Lab</span></a><span class="badge">LOCAL RESEARCH / 001</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">FROM GENERATION TO JUDGEMENT</p><h1>What makes a design work?</h1><p>Make two posters. Choose what communicates best. Then see what the checks missed.</p></section>
+    <div class="workspace">
+      <aside>
+        <p class="eyebrow">01 / WRITE THE BRIEF</p><h2>A small experiment.</h2>
+        <form id="brief-form">
+          <label for="title">Event title</label><input id="title" name="title" maxlength="120" required value="Tomorrow, together">
+          <label for="details">Event details</label><textarea id="details" name="details" rows="3" maxlength="240" required>A community design evening · 18 October · Harbour Hall</textarea>
+          <label for="cta">Call to action</label><input id="cta" name="cta" maxlength="60" required value="Reserve your place">
+          <label for="seed">Generation seed</label><input id="seed" name="seed" type="number" min="0" max="4294967295" step="1" required value="42">
+          <p class="hint">Same brief + seed = same designs. Left/right order is shuffled separately.</p>
+          <button class="primary" id="generate" type="submit">Generate comparison <span>↗</span></button>
+        </form>
+        <div class="note"><strong>Template baseline</strong><p>Two fixed layout recipes. No trained model yet. Your choices build the workflow for future learning experiments.</p></div>
+        <a class="export" href="/api/export" download="design-preferences.json">↓ Export local records</a>
+      </aside>
+      <section class="comparison" aria-labelledby="comparison-heading">
+        <div class="section-head"><div><p class="eyebrow">02 / LOOK BEFORE YOU SCORE</p><h2 id="comparison-heading">Your eye is the first judge.</h2></div><span id="state-label" class="status-tag">READY</span></div>
+        <p id="status" role="status" aria-live="polite">Generate a comparison to begin. Nothing leaves this computer.</p>
+        <div id="empty"><span>↔</span><h3>One brief. Two possibilities.</h3><p>Compare clarity, hierarchy and whether you would use the poster.<br>Automated scores stay hidden until you choose.</p></div>
+        <div id="results" hidden>
+          <div class="posters"><figure><figcaption>LEFT</figcaption><img id="left-image" alt="Left event poster"></figure><figure><figcaption>RIGHT</figcaption><img id="right-image" alt="Right event poster"></figure></div>
+          <div class="judgement"><h3>Which better communicates the brief?</h3><p class="hint">Consider readability, visual hierarchy and appeal. Tie means equally good; neither means both need work.</p><label for="reason">What influenced your choice? <span class="optional">Optional</span></label><input id="reason" maxlength="1000" placeholder="For example: the title is easier to find.">
+            <div class="votes"><button data-choice="left">Prefer left</button><button data-choice="right">Prefer right</button><button data-choice="tie">Tie</button><button data-choice="neither">Neither</button></div>
+          </div>
+          <section id="metrics" hidden><p class="eyebrow">03 / QUESTION THE MEASUREMENT</p><h3>Structure is only part of the story.</h3><p class="hint">Text fit is estimated. These checks do not measure aesthetics or predict human preference.</p><div id="metric-grid"></div></section>
+        </div>
+      </section>
+    </div>
+    <footer><span>BRIEF → LAYOUT → RENDER → HUMAN PREFERENCE</span><span>Version 0.1 · Template research baseline</span></footer>
+  </main>
+</body>
+</html>

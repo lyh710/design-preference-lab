@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "design-preference-lab"
+version = "0.1.0"
+description = "A local research baseline for design generation and human preference evaluation"
+requires-python = ">=3.11"
+dependencies = []
+readme = "README.md"
+
+[project.scripts]
+design-preference-lab = "design_lab.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["design_lab*"]
+
+[tool.setuptools.package-data]
+design_lab = ["static/*", "examples/*.json"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["build", "dist"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.mypy]
+python_version = "3.11"
+check_untyped_defs = true
+files = ["design_lab"]
