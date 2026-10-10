@@ -83,22 +83,20 @@ configuration, loss, generated examples and successful checkpoint reload.
 
 ## Daily session / reminder status
 
-Intended cadence: **7 pm Australia/Sydney, daily**, originally discussed to start
-11 October 2026. Use this timezone across daylight-saving changes.
+**Configured and active:** standalone automation
+`design-preference-lab-daily-learning`, daily at **7 pm Australia/Sydney**, starting
+**11 October 2026**. Verified on 10 October by creating/updating the task and
+reading back its saved configuration. It points to this GitHub repo and is not
+attached to the chat that created it. Local execution requires the Mac to be on
+and the desktop app running. A successful scheduled run has not yet been observed.
 
-**Unverified:** the earlier conversation said a reminder was scheduled, but no
-matching local Codex automation or verifiable hosted task ID was found during
-the 10 October check. No replacement reminder was created. This repo records the
-intended schedule; it does not itself run a scheduler. Before creating a reminder,
-verify existing tasks to avoid duplicates and confirm its destination with the user.
-
-Any future reminder should point to this repository and resume this file's next
-unfinished lesson. It should invite participation, not autonomously mark progress,
-run paid experiments or advance to another lesson when the learner is absent.
+Read [daily-session.md](daily-session.md) for its saved prompt, run instructions,
+verification limits and recovery procedure. Unattended runs invite participation
+and resume the unfinished lesson; they do not advance learning or modify the repo.
 
 ## Open decisions
 
-- Verify or establish the actual daily reminder and record its task ID/status.
+- Confirm the first actual daily run; configuration is verified, execution is not yet observed.
 - Select the tiny training experiment and compatible local tools during Lesson 01.
 - Choose a public source license before inviting reuse; none has been selected.
 

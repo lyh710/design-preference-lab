@@ -20,6 +20,9 @@ observations. [The roadmap](docs/learning-roadmap.md) explains the longer-term p
 **[Copy the saved new-chat prompt from RESUME.md](RESUME.md).** You do not need
 to remember the prompt or retrieve the previous conversation.
 
+[Daily session schedule and instructions](docs/daily-session.md) are also recorded
+in the repo. The standalone reminder uses these files rather than this chat's history.
+
 The new chat needs access to the repository contents; a name alone is insufficient.
 Use the latest pushed commit when starting elsewhere. Local-only or uncommitted
 work cannot be recovered from a fresh GitHub checkout. Private raw records remain

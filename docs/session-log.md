@@ -62,3 +62,20 @@ the combined project, and the evidence each stage should produce. Distinguished
 advertised requirements from our selected learning techniques and future plans.
 Linked this brief near the top of README and made it required reading in AGENTS.md.
 The next lesson and actual training status are unchanged.
+
+## 2026-10-10 — standalone daily schedule
+
+Before deleting the original chat, the learner requested verification of a daily
+schedule that resumes directly from the repo. No matching local schedule existed.
+Created standalone automation `design-preference-lab-daily-learning` and set its
+first session to 11 October 2026 at 19:00 Australia/Sydney, recurring daily.
+The app reported ACTIVE. It uses a projectless standalone target and a GitHub
+repository prompt, with no dependency on the originating chat or working folder.
+
+Saved the session procedure and scheduler prompt in `docs/daily-session.md`, then
+updated the automation to read those files. The learner was informed that this
+local schedule requires the Mac and desktop app to be running. Configuration is
+verified; no scheduled firing or learner completion is claimed. The old hosted
+ChatGPT reminder remains unverified, as recorded in the schedule document.
+Lesson 01 remains unfinished. The unattended task must invite participation and
+must not advance progress or launch training on its own.
