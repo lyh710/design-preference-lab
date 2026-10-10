@@ -1,4 +1,7 @@
 # Learning roadmap: design preference laboratory
+
+This file describes the intended curriculum, not completion status. To start or
+resume a session, read [learning-state.md](learning-state.md) first.
 ## Purpose and boundary
 Build practical evidence that you can train and evaluate generative systems, using a
 small, reproducible project: **event-poster brief → JSON layout → SVG → rule checks
@@ -172,8 +175,8 @@ auditable training practice and its interaction with preference measurement.
 - [PyTorch: Save and Load the Model](https://docs.pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html) — state dictionaries and safe weight loading.
 - [Hugging Face Transformers: bitsandbytes quantisation](https://huggingface.co/docs/transformers/main/quantization) — 4-bit quantisation and QLoRA context.
 
-## Three decisions for the next session
-1. Keep event posters or change the design domain after trying the first app.
-2. Choose a small training question and untouched brief families for milestone two.
-3. Confirm the local machine’s RAM, free disk, and operating system before choosing
-   any model or downloading training dependencies or weights.
+## Session planning
+
+The next lesson, current environment evidence and unresolved decisions are maintained
+in [learning-state.md](learning-state.md). Advance by demonstrated learning and
+experiment evidence, rather than a fixed number of calendar days.

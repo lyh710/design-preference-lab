@@ -1,6 +1,8 @@
 # First experiment: when checks and preferences disagree
 
-**Status:** ready to run with a human. No observations have been collected here.
+**Status:** one qualitative comparison was discussed; see the
+[session log](session-log.md). The full exercise below remains optional practice.
+Use [learning-state.md](learning-state.md) for the current resume point.
 
 **Question:** Do structural checks distinguish the two layout hierarchies that a
 person finds differently effective?

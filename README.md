@@ -6,6 +6,23 @@ Enter an event-poster brief → generate two structured layouts → render SVG �
 
 **Current status:** local template baseline. There is no trained generator, learned evaluator, human study result, or cloud deployment yet. This is an independent personal project, not affiliated with Canva.
 
+## Resume learning here
+
+**Start with [learning-state.md](docs/learning-state.md).** It records what has
+actually been completed, the next unfinished lesson, working agreements and open
+questions. [The session log](docs/session-log.md) preserves past decisions and
+observations. [The roadmap](docs/learning-roadmap.md) explains the longer-term path.
+
+To resume in a fresh chat, provide this repo or a local checkout and say:
+
+> Read AGENTS.md and docs/learning-state.md. Resume the next unfinished learning
+> session from the committed state. Explain where we left off before proceeding.
+
+The new chat needs access to the repository contents; a name alone is insufficient.
+Use the latest pushed commit when starting elsewhere. Local-only or uncommitted
+work cannot be recovered from a fresh GitHub checkout. Private raw records remain
+local; public-safe summaries and reproduction instructions are committed.
+
 ## Run locally
 
 Requires Python 3.11 or newer. No runtime dependencies, API keys, model downloads or paid services.
@@ -47,7 +64,11 @@ There is deliberately no combined “beauty score.” Automated checks and templ
 
 [Learning roadmap](docs/learning-roadmap.md) stages tiny training, real LoRA adaptation, quantised adaptation, multimodal preference models, reward-hacking experiments, diffusion and separately budgeted multi-GPU work. Training comes next; UI expansion should not postpone it.
 
-For the first hands-on session, follow the [first experiment](docs/first-experiment.md): generate three different briefs, make your own comparisons, and look for a pair where identical structural metrics hide a meaningful preference. Write a falsifiable explanation. These initial labels are practice records, not a statistically powered dataset.
+The [first experiment](docs/first-experiment.md) is optional introductory practice:
+compare three briefs and look for a pair where identical structural metrics hide
+a meaningful preference. These labels are practice records, not a statistically
+powered dataset. Follow the next lesson in [learning-state.md](docs/learning-state.md)
+when resuming; completing this optional exercise is not a gate to model training.
 
 Each later experiment should state its hypothesis first, separate development and untouched test briefs, record model/data revisions, report failure slices and uncertainty, and include a short research memo. Keep private or employer material out of the repository. See the [design](docs/superpowers/specs/2026-10-10-first-slice-design.md) and [implementation plan](docs/superpowers/plans/2026-10-10-first-slice.md).
 
