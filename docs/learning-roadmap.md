@@ -161,13 +161,10 @@ If any item fails, reduce scope or change the experiment; do not buy hardware or
 paid compute to force it through.
 
 ## How this maps to the supplied roles
-| Role | Evidence this roadmap deliberately builds |
-| --- | --- |
-| [Canva Principal Research Scientist – Evaluations](https://www.linkedin.com/jobs/view/4459354951/) | Human-preference protocol, rubric and rater reliability; correlation and disagreement between judges and users; evaluator/reward-model limits; multimodal quality and launch-style regression gates. |
-| [Canva Senior Research Scientist – Design Generation](https://www.linkedin.com/jobs/view/4460307145/) | End-to-end scoped research, real training and LoRA, data/objective choices, held-out evaluation, design-generation failure analysis, then a bounded path to diffusion and multi-GPU practice. |
 
-The learner already brings evaluation leadership; the gap addressed here is personal,
-auditable training practice and its interaction with preference measurement.
+The source job links, dated requirement summaries, learner starting point and
+project-to-role mapping are maintained in [role-context.md](role-context.md).
+Use that brief to check whether a proposed lesson advances the original purpose.
 
 ## Technical sources consulted
 - [Hugging Face PEFT: LoRA](https://huggingface.co/docs/peft/main/conceptual_guides/lora) — frozen base weights, trainable low-rank updates, and adapter configuration.

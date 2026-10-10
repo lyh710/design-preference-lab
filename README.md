@@ -2,13 +2,17 @@
 
 A small research app for asking: **does better measured design quality mean people prefer the result?**
 
+**Why this project exists:** preparation for Canva's Principal Research Scientist –
+Evaluations and Senior Research Scientist – Design Generation roles, through
+hands-on research. [Read the role context and learning priorities](docs/role-context.md).
+
 Enter an event-poster brief → generate two structured layouts → render SVG → choose a preference → inspect structural checks. This is the first executable slice of a longer generator-training and learned-evaluation project.
 
 **Current status:** local template baseline. There is no trained generator, learned evaluator, human study result, or cloud deployment yet. This is an independent personal project, not affiliated with Canva.
 
 ## Resume learning here
 
-**Start with [learning-state.md](docs/learning-state.md).** It records what has
+Read [the role context](docs/role-context.md), then **[learning-state.md](docs/learning-state.md)**. The latter records what has
 actually been completed, the next unfinished lesson, working agreements and open
 questions. [The session log](docs/session-log.md) preserves past decisions and
 observations. [The roadmap](docs/learning-roadmap.md) explains the longer-term path.

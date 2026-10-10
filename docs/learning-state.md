@@ -7,8 +7,9 @@ This is the authoritative resume point. Update it after each substantive session
 
 Develop hands-on ability to train, adapt, debug and evaluate generative models,
 with reproducible research that the learner can explain in an interview. The two
-target roles are Canva Design Generation and Evaluations; links and competency
-mapping are in [the roadmap](learning-roadmap.md).
+target roles, their requirements, the learner's starting point and why they shape
+this project are documented in [role-context.md](role-context.md). Read that brief
+before selecting lessons; use [the roadmap](learning-roadmap.md) for the sequence.
 
 The learner has substantial research and LLM-evaluation experience. Personal
 generative-model training is the priority gap. Use the existing app to support

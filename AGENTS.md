@@ -5,8 +5,9 @@ Chat history is optional context, not the source of progress or decisions.
 
 ## Start every new working session
 
-1. Read `docs/learning-state.md` first. It names the next unfinished lesson,
-   current constraints, unresolved decisions and evidence of completed work.
+1. Read `docs/role-context.md` for the two target roles, learner starting point
+   and project purpose, then `docs/learning-state.md` for the next unfinished
+   lesson, current constraints, unresolved decisions and completion evidence.
 2. Read the latest entry in `docs/session-log.md` and the material linked for that
    next action. Consult `docs/learning-roadmap.md` when planning a new milestone.
 3. Inspect `git status` and recent commits before editing. Preserve unrelated

@@ -51,3 +51,14 @@ The learner requested that the restart prompt also live in the repo, rather than
 relying on memory or chat history. Saved the prompt in root `RESUME.md` and linked
 it from the README and learning state. Lesson 01 remains the next unfinished
 lesson; this documentation change does not represent learning progress.
+
+## 2026-10-10 — preserve the roles as the starting brief
+
+The learner clarified that the two applications are the starting context for the
+entire programme. The repo had only a short role mapping near the end of the
+roadmap. Added `docs/role-context.md` with job titles/IDs/source links, dated
+requirement summaries, learner-provided background and priorities, the reason for
+the combined project, and the evidence each stage should produce. Distinguished
+advertised requirements from our selected learning techniques and future plans.
+Linked this brief near the top of README and made it required reading in AGENTS.md.
+The next lesson and actual training status are unchanged.
